@@ -71,9 +71,10 @@ navbar li.dropdown {
     display: block;
 }
 
-img {
+#content div img {
     float: right;
     width: 250px;
     height: 200px;
     border-radius:7px;
+    margin: 0px 50px 5px 60px;
 }
