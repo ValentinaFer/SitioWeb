@@ -37,17 +37,44 @@
                 overflow: hidden;
                 background-color: #439093;
             }
-            navbar a {
+            
+            navbar li {
                 float: left;
-                font-size: 14px;
-                color: black;
-                text-align: center;
-                text-decoration: none;
-                padding: 14px 16px;
             }
-            navbar a:hover {
+            
+            navbar a, .dropbtn{
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            navbar a:hover, .dropdown:hover {
                 background-color: #F9EBD9;
             }
+
+            navbar li.dropdown {
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #439093;
+            }
+
+            .dropdown-content a{
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color:#F9EBD9
+            }
+            .dropdown:hover .dropdown-content{
+                display: block;
+            }
+
         </style>
     </head>
     <body>
@@ -59,7 +86,13 @@
         <navbar>
             <ul>
                 <li> <a href="#Index">Inicio</a> </li>
-                <li> <a href="#A">Explore</a> </li>
+                <li class="dropdown"> <a href="#A" class="dropbtn">Explore</a> 
+                    <div class="dropdown-content"> 
+                        <a href="#">Cookies</a>
+                        <a href="#">Tarts</a>
+                        <a href="#">Breads</a>
+                    </div>
+                </li>
                 <li> <a href="#B">Find recipe</a> </li>
                 <li> <a href="#C">C</a> </li>
                 <li> <a href="#D">D</a> </li>
