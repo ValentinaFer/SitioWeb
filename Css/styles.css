@@ -9,10 +9,7 @@ body {
 
 header, body, footer{
     margin: 30px;
-}
-
-footer {
-    background-color: aliceblue;
+    min-width: min-content;
 }
 
 #content {
@@ -21,7 +18,7 @@ footer {
     border-radius: 0px 7px 7px 7px;
 }
 
-header {
+header, footer {
     padding: 80px;
     text-align: center;
     background-color: #F09B93;
@@ -29,6 +26,12 @@ header {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
     border-radius: 7px;
+}
+
+footer {
+    background-color: aliceblue;
+    padding: 20px;
+    color:#F09B93;
 }
 
 h1 {
@@ -41,8 +44,8 @@ navbar ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    height: 48px;
     border-radius: 7px 7px 0px 0px;
+    height: 41%;
 }
 
 navbar li {
@@ -52,6 +55,7 @@ navbar li {
 .fa-solid {
     padding: 10px 16px 5px;
     height: inherit;
+    background-color: inherit;
 }
 
 navbar ul a, navbar i{
@@ -59,7 +63,6 @@ navbar ul a, navbar i{
     color: white;
     text-align: center;
     padding: 13px 16px 15px;
-    height: 41%;
     margin: 0;
     text-decoration: none;
     background-color: #439093;
