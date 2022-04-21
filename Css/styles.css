@@ -61,7 +61,6 @@ navbar li {
 navbar ul a, navbar i{
     display: inline-block;
     color: white;
-    text-align: center;
     padding: 13px 16px 15px;
     margin: 0;
     text-decoration: none;
@@ -106,5 +105,12 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
     height: 150px;
     border-radius:7px;
     margin: 0px 50px 5px 60px;
+}
+
+#content div a{
+    padding: 5px 10px;
+    border-radius: 7px;
+    text-decoration: none;
+    background:#F09B93;
 }
 
