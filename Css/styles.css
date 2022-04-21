@@ -14,6 +14,7 @@ header, body {
     padding: 20px;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 header {
@@ -30,13 +31,12 @@ h1 {
     font-size: 40px;
 }
 
-
 navbar ul {
+    width:fit-content;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #439093;
     height: 48px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
@@ -44,34 +44,39 @@ navbar ul {
 
 navbar li {
     float: left;
+}
+
+.fa-solid {
+    padding-top: 10px;
+    padding-bottom: 5px;
     height: inherit;
 }
 
-navbar a, .dropbtn, .dropbtnUser{
+navbar ul a, navbar i{
     display: inline-block;
     color: white;
     text-align: center;
     padding: 14px 16px;
+    height: 41%;
+    margin: 0;
     text-decoration: none;
+    background-color: #439093;
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
 }
 
 .dropbtnUser{
     padding: inherit;
 }
 
-navbar a:hover, .dropdown:hover, i:hover {
+navbar a:hover, navbar .dropdown:hover, navbar i:hover{
     background-color:#F09B93;
-}
-
-navbar li.dropdown {
-    display: inline-block;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #439093;
-    
 }
 
 .dropdown-content a{
@@ -82,7 +87,8 @@ navbar li.dropdown {
     background-color:#F09B93
 }
 .dropdown:hover .dropdown-content{
-    display: block;
+    display:block;
+    width: inherit;
 }
 
 
