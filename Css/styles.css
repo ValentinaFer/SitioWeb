@@ -74,7 +74,7 @@ navbar ul a, navbar i{
     padding: inherit;
 }
 
-navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
+navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn, navbar i:hover{
     background-color:#F09B93;
     border-radius: inherit;
 }
@@ -90,10 +90,8 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
     display: block;
     border-radius: 0%;
 
-
     position: relative;
-    z-index: 3;
-
+    z-index: 1;
 
 }
 
@@ -119,5 +117,6 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
     border-radius: 7px;
     text-decoration: none;
     background:#F09B93;
+    color: white;
 }
 
