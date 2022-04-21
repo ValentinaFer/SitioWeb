@@ -63,14 +63,13 @@ navbar ul a, navbar i{
     display: inline-block;
     color: white;
     padding: 13px 16px 15px;
-    margin: 0;
     text-decoration: none;
     background-color: #439093;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
 
-navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn, navbar i:hover{
+navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     background-color:#F09B93;
     border-radius: inherit;
 }
