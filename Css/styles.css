@@ -4,18 +4,21 @@ body {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
     background-image: url("../Css-images/green.jpg") ;
+    background-color: rgb(187, 223, 187);
 }
 
-header, body {
+header, body, footer{
     margin: 30px;
+}
+
+footer {
+    background-color: aliceblue;
 }
 
 #content {
     background-color: aliceblue;
     padding: 20px;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
+    border-radius: 0px 7px 7px 7px;
 }
 
 header {
@@ -39,8 +42,7 @@ navbar ul {
     padding: 0;
     overflow: hidden;
     height: 48px;
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
+    border-radius: 7px 7px 0px 0px;
 }
 
 navbar li {
@@ -48,8 +50,7 @@ navbar li {
 }
 
 .fa-solid {
-    padding-top: 10px;
-    padding-bottom: 5px;
+    padding: 10px 16px 5px;
     height: inherit;
 }
 
@@ -57,7 +58,7 @@ navbar ul a, navbar i{
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 13px 16px 15px;
     height: 41%;
     margin: 0;
     text-decoration: none;
@@ -70,28 +71,31 @@ navbar ul a, navbar i{
     padding: inherit;
 }
 
-navbar a:hover, navbar .dropdown:hover, navbar i:hover{
+navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
     background-color:#F09B93;
+    border-radius: inherit;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #439093;
+    border-radius: 0%;
 }
 
 .dropdown-content a{
     display: block;
+    border-radius: 0%;
 }
 
 .dropdown-content a:hover {
-    background-color:#F09B93
+    background-color:#F09B93;
+    border-radius: 0%;
 }
 .dropdown:hover .dropdown-content{
     display:block;
     width: inherit;
 }
-
 
 #content div img {
     float: right;
