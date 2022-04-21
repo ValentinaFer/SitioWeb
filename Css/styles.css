@@ -13,6 +13,7 @@ header, body, footer{
 }
 
 #content {
+    position: relative;
     background-color: aliceblue;
     padding: 20px;
     border-radius: 0px 7px 7px 7px;
@@ -88,6 +89,12 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover, navbar i:hover{
 .dropdown-content a{
     display: block;
     border-radius: 0%;
+
+
+    position: relative;
+    z-index: 3;
+
+
 }
 
 .dropdown-content a:hover {
