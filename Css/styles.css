@@ -70,10 +70,6 @@ navbar ul a, navbar i{
     border-top-left-radius: 7px;
 }
 
-.dropbtnUser{
-    padding: inherit;
-}
-
 navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn, navbar i:hover{
     background-color:#F09B93;
     border-radius: inherit;
