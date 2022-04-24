@@ -80,10 +80,9 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     border-radius: 0%;
 }
 
-.dropdown-content a{
+a.dropbtn .dropdown-content a{
     display: block;
     border-radius: 0%;
-
     position: relative;
     z-index: 1;
 
