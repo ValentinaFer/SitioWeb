@@ -6,6 +6,24 @@ body {
     background-color: rgb(187, 223, 187);
 }
 
+header .btn{
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    float: right;
+    margin: 2%;
+    padding: 1% 1.5%;
+    color: #ffffff;
+}
+
+header .btn:hover{
+    background-color: #ffffff;
+    color: #F09B93;
+}
+
+header #hcontent {
+    padding: 80px;
+}
+
 header, body, footer{
     margin: 30px;
     min-width: min-content;
@@ -19,7 +37,7 @@ header, body, footer{
 }
 
 header, footer {
-    padding: 80px;
+    /*padding: 80px;*/
     text-align: center;
     background-color: #F09B93;
     color: white;
