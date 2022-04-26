@@ -116,8 +116,12 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     display:block;
 }
 
-
-
+#content div{
+    margin: 30px 0px;
+    padding: 20px;
+    min-height: 150px;
+    min-width: 600px;
+}
 
 #content div img {
     float: right;
