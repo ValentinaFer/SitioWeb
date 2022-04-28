@@ -8,6 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="Css/styles.css">
         <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
+        <script lang="Javascript" src="Js/Js.js"></script>
     </head>
     <body>
 
@@ -60,16 +61,17 @@
 
             <h3>Ingredients</h3>
             <form>
-                <input type="checkbox" id="i1" value="flour">
+                <input type="checkbox" id="i1" value="flour" onclick="ingredientText()">
                 <label for="i1">2 cups(240 gr) all purpose flour;</label><br>
-                <input type="checkbox" id="i2" value="sugar">
+                <input type="checkbox" id="i2" value="sugar" onclick="ingredientText()">
                 <label for="i2">2 TBSP(25 gr) granulated sugar;</label><br>
-                <input type="checkbox" id="i3" value="salt">
+                <input type="checkbox" id="i3" value="salt" onclick="ingredientText()">
                 <label for="i3">1/3 tsp table salt;</label><br>
-                <input type="checkbox" id="i4" value="butter">
+                <input type="checkbox" id="i4" value="butter" onclick="ingredientText()">
                 <label for="i4">1 1/2 sticks(3/4 cup, 170gr) cold, unsalted butter;</label><br>
-                <input type="checkbox" id="i5" value="water">
+                <input type="checkbox" id="i5" value="water" onclick="ingredientText()">
                 <label for="i5">8-12 TBSP(120-180ml) ice cold water;</label><br>
+                <p id="text" style="display: none;">You have all the ingredients! :)</p>
             </form>
 
 

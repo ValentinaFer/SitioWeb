@@ -121,7 +121,8 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     width: 60%;
     min-height: 200px;
     min-width: 300px;
-    background-color: #439093;
+    border: 2px solid #439093;
+    box-shadow: 10px 10px 10px rgb(92, 131, 143) ;
 }
 
 #content .flex-item p {
