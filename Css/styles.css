@@ -25,14 +25,14 @@ header #hcontent {
 }
 
 header, body, footer{
-    margin: 30px;
+    margin: 4%;
     min-width: min-content;
 }
 
 #content {
     position: relative;
     background-color: aliceblue;
-    padding: 20px;
+    padding: 5%;
     border-radius: 0px 7px 7px 7px;
 }
 
@@ -53,6 +53,7 @@ footer {
 }
 
 h1 {
+    margin-top: inherit;
     font-size: 40px;
 }
 
@@ -68,16 +69,15 @@ navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     border-radius: 7px 7px 0px 0px;
-    height: 41%;
 }
 
 navbar li {
     float: left;
 }
 
-navbar ul a, navbar i{
+navbar ul a{
     display: inline-block;
     color: white;
     padding: 13px 16px 15px;
@@ -95,7 +95,6 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
 .dropdown-content {
     display: none;
     position: absolute;
-    border-radius: 0%;
 }
 
 .dropdown-content a{
@@ -112,6 +111,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
 }
 .dropdown:hover .dropdown-content{
     display:block;
+    
 }
 
 
@@ -150,4 +150,9 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#body2{
+    background-color: #439093;
+    
 }
