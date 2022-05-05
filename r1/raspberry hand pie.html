@@ -8,7 +8,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../Css/styles.css">
         <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
-        <script lang="Javascript" src="Js/Js.js"></script>
+        <script lang="Javascript" src="../Js/Js.js"></script>
     </head>
 
     <body>
@@ -25,7 +25,7 @@
 
         <navbar>
             <ul>
-                <li> <a href="index.html">Home</a> </li>
+                <li> <a href="../index.html">Home</a> </li>
 
                 <li class="dropdown"> 
 
@@ -53,6 +53,7 @@
 
         <div id="content">
 
+            <img id="recipe_img" src="../Css-images/R.jfif" alt="Raspberry hand pie with heart-shaped window.">
             <h1>Raspberry hand pie</h1>
 
             <p>
@@ -62,14 +63,18 @@
             <navbar id="navbar2">
                 <ul>
                     <li>
-                        <a>Ingredients</a>
+                        <a href="#Ingredients">Ingredients</a>
+                    </li>
+                    <li>
+                        <a href="#Directions">Directions</a>
                     </li>
                 </ul>
             </navbar>
 
             <div id="body2">
 
-                <h3 id="Ingredients">Ingredients!</h3>
+                <h2 id="Ingredients">Ingredients!</h2>
+                <p>Servings: 12 hand pies</p>
                 <form>
                     <input type="checkbox" class="i" id="i1" value="flour" onclick="ingredientText()">
                     <label for="i1">2 cups(240 gr) all purpose flour;</label><br>
@@ -84,8 +89,24 @@
                     <p id="text" style="display: none;">You have all the ingredients! :)</p>
                 </form>
 
-                <h3 id="directions">Directions! </h3>
+                <hr>
+                <h2 id="Directions">Directions! </h2>
 
+                <p>
+                    These hand pies are made from two components: the pie crust and the raspberry filling. Of course you can use a pre-made pie crust if you like, just skip steps 1, 2, 3 and jump right into making the raspberry filling.
+                </p>
+
+                <ol>
+                    <li>
+                        <h3>Prep crust:</h3>
+                        <p>Start by whisking all the dry ingredients for the crust in a large mixing bowl. this will be fluor, sugar and salt.</p>
+                        <p>Next you want to cut the cold butter into small pieces and add it to the mixing bowl with the dry ingredients. It's very important that the butter is extremely cold because this will help you make the crust very flaky.</p>
+                    </li>
+                    <li>
+                        <h3>Chill the dought:</h3>
+                        <p>Start by whisking all the dry ingredients for the crust in a large mixing bowl. this will be fluor, sugar and salt.</p>
+                    </li>
+                </ol>
 
             </div>
 
