@@ -130,7 +130,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
 }
 
 .flex-item img {
-    float: right;
+    float: left;
     width: 300px;
     height: 200px;
     border-radius:7px;
