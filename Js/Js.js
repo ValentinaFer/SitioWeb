@@ -20,7 +20,7 @@ function ingredientText() {
              
         }
     }
-    if (cb.checked == true){
+    if (ing.checked == true){
         text.style.display = "block";
     } else {
         text.style.display = "none";
