@@ -51,7 +51,7 @@ header, footer {
 }
 
 header{
-    background-image: url(../Css-images/CottageCoreHeader.jpg);
+    background-image: url(../Css-images/Canva\ -\ Rustic\ Farmhouse\ Kitchen\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -59,7 +59,7 @@ header{
 footer {
     background-color: aliceblue;
     padding: 20px;
-    color:#F09B93;
+    color:#cd717d;
 }
 
 h1 {
@@ -91,13 +91,13 @@ navbar ul a{
     color: white;
     padding: 13px 16px 15px;
     text-decoration: none;
-    background-color: #43765a;
+    background-color: #7b9771;
     border-top-right-radius: 7px;
     border-top-left-radius: 7px;
 }
 
 navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
-    background-color:#F09B93;
+    background-color:#cd717d;
     border-radius: inherit;
 }
 
@@ -115,7 +115,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
 }
 
 .dropdown-content a:hover {
-    background-color:#F09B93;
+    background-color:#cd717d;
     border-radius: 0%;
 }
 .dropdown:hover .dropdown-content{
@@ -130,7 +130,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     width: 60%;
     min-height: 200px;
     min-width: 300px;
-    background-color: #b4cec0;
+    background-color: #beceb4;
     border-radius: 7px;
     box-shadow: 10px 10px 10px rgb(92, 131, 143) ;
 }
@@ -152,7 +152,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     padding: 5px 10px;
     border-radius: 7px;
     text-decoration: none;
-    background:#F09B93;
+    background:#cd717d;
     color: white;
 }
 
