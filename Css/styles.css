@@ -3,11 +3,16 @@ html{
     scroll-behavior: smooth;
 }
 
+img{
+    border-radius: 7px;
+}
+
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
     background-image: url("../Css-images/green.jpg") ;
     background-color: rgb(187, 223, 187);
+    line-height: 1.7;
 }
 
 header .btn{
@@ -86,7 +91,7 @@ navbar li {
     float: left;
 }
 
-navbar ul a{
+navbar ul .nav_link, navbar ul .dropbtn{
     display: inline-block;
     color: white;
     padding: 13px 16px 15px;
@@ -96,7 +101,11 @@ navbar ul a{
     border-top-left-radius: 7px;
 }
 
-navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
+.nav_link #search{
+    background-color: #2f4a2a;
+}
+
+navbar .nav_link:hover, navbar li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     background-color:#cd717d;
     border-radius: inherit;
 }
@@ -106,7 +115,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     position: absolute;
 }
 
-.dropdown-content a{
+.dropdown-content .nav_link{
     display: block;
     border-radius: 0%;
     position: relative;
@@ -114,7 +123,7 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     padding: 12px 16px;
 }
 
-.dropdown-content a:hover {
+.dropdown-content .nav_link:hover {
     background-color:#cd717d;
     border-radius: 0%;
 }
@@ -133,7 +142,8 @@ navbar a:hover, li, .dropdown-content:hover, .dropdown:hover .dropbtn{
     min-width: 300px;
     background-color: #beceb4;
     border-radius: 7px;
-    box-shadow: 10px 10px 10px rgb(92, 131, 143);
+    line-height: normal;
+    box-shadow: 10px 10px 10px rgb(160 175 185);
     transition: transform .2s;
 }
 
@@ -195,11 +205,74 @@ hr{
 
 #content #recipe_img {
     width: 100%;
-    border-radius: inherit;
-    padding: 1%;
 }
 
 #body2 ol li{
     background-color: transparent;
 }
 
+footer a:link{
+    color: #cd717d;
+    text-decoration: none;
+}
+
+footer a:visited{
+    color: #cd717d;
+    text-decoration: none;
+}
+
+footer a:active{
+    color:#2f4a2a;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #cd717d;
+    text-decoration: underline;
+}
+
+footer .fc{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+footer .fc .f-item{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+footer h2{
+    margin-bottom: 2px;
+}
+
+footer h3{
+    margin-bottom: 1px;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    padding: 0%;
+}
+
+footer #contact{
+    flex-direction: column;
+}
+
+footer #social{
+    flex-direction: row;
+    justify-content: center;
+}
+
+footer li{
+    align-items: center;
+}
+
+footer #social a{
+    margin: 10px;
+}
+
+#text {
+    display: none;
+}
