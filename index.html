@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" charset="utf-8">
     <head>
-        <meta lang="En" charset="UTF-8">
+        <meta lang="en" charset="utf-8">
         <meta name="viewport" content="width=devide-width">
         <title>Cottagecore recipes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="Css/styles.css">
         <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
+        <script lang="Javascript" src="Js/Js.js"></script>
     </head>
     <body>
 
@@ -24,14 +25,14 @@
 
         <navbar>
             <ul>
-                <li> <a href="index.html"><i class="fa-solid fa-house"></i></a> </li>
+                <li> <a href="index.html" class="nav_link"><i class="fa-solid fa-house"></i></a> </li>
 
                 <li class="dropdown"><a href="#Recipes" class="dropbtn">Explore recipes</a> 
                     <div class="dropdown-content">
-                        <a> <input type="text" placeholder="Search recipe..."> </a>
-                        <a href="#Cookies"> </i> Cookies</a>
-                        <a href="#Tarts"> </i> Tarts</a>
-                        <a href="#Breads"> </i> Breads</a>
+                        <div class="nav_link"><span id="search"><input type="text" placeholder="Search recipe..."><i class="fa-solid fa-magnifying-glass"></i> </span></div>
+                        <a href="#Cookies" class="nav_link"> </i> Cookies</a>
+                        <a href="#Tarts" class="nav_link"> </i> Tarts</a>
+                        <a href="#Breads" class="nav_link"> </i> Breads</a>
                     </div>
                 </li>
             </ul>
@@ -42,6 +43,8 @@
             <p>Most of us certanly love food. For many of us, cooking up great recipes is how we celebrate, show our love and share our lives and our homes. Some of my best times certainly involve sharing delicious food with friends and family.</p>
             <p>If you've spent time on social media in the past two years, you've probably encountered the term "cottagecore." It's used to describe the aesthetic and lifestyle associated with old-fashioned cottages and country living — in simpler terms, a revival of rustic, rural ways. However, cottagecore isn't just about frock dresses and wildflowers; a big part of the movement involves delicious foods and cooking techniques that have fallen out of frequency in favor of speedier methods in the modern age. We think wintertime is your perfect opportunity slow down and embrace the simpler, cozier lifestyle embodied in cottagecore. You can warm up your oven to make foods like sourdough bread, cottage pie, savory tarts, or whimsical cookies; or light the stove and prepare an earthy mushroom soup or hearty beef stew. Scroll through to find cottagecore recipes that will warm up your winter in more ways than one.</p>
             <h2>Most popular recipes! </h2>
+
+            <img src="Css-images/cookies.png" name="miimagen" style="height: 150px; width: 150px"><form><input type="button" onclick="imgRandom()" value="cambiar"></form>
 
             <div class="flex-container">
 
@@ -72,11 +75,24 @@
 
         <footer>
             <h2>Cottagecore recipes</h2>
-
-            <div>
-                <h4>Contact us</h4>
-                <p>mail@...</p>
-
+            <div class="fc">
+            <div class="f-item"> 
+                <h3>Contact us</h3>
+                <ul id="contact">
+                    <li><a href="#23434545656">23434545656</a></li>
+                    <li><a href="mailto:info@cottagecorer.com">info@cottagecorer.com</a></li>
+                </ul>
+            </div>
+            <div class="f-item">
+                <h3>Follow us</h3>
+                <ul id="social">
+                    <li><a href="#facebook"><i class="fa-brands fa-facebook-square fa-xl"></i></a></li>
+                    <li><a href="#instagram"><i class="fa-brands fa-instagram-square fa-xl"></i></a></li>
+                    <li><a href="#pinterest"><i class="fa-brands fa-pinterest-square fa-xl"></i></a></li>
+                    <li><a href="#twitter"><i class="fa-brands fa-twitter-square fa-xl"></i></a></li>
+                </ul>
+                
+            </div>
             </div>
             
         </footer>
