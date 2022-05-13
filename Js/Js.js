@@ -1,16 +1,16 @@
 
 function ingredientText(){
     let ingchecked = 0;
-    let ings = document.getElementById("ing");
+    let ings = document.getElementsByName("in");
     let text = document.getElementById("text");
 
-    for (let i = 0; i < 11; i++){
-        if (ings.in[i].checked){
+    for (let i = 0; i < ings.length; i++){
+        if (ings[i].checked){
             ingchecked++;
         }
     }
 
-    if (ingchecked == 11){
+    if (ingchecked == ings.length){
         text.style.display = "block";
     } else {
         text.style.display = "none";
