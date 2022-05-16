@@ -194,12 +194,12 @@ hr{
     margin-top: 1%;
 }
 
-#navbar2 a{
+#navbar2 .nav_link{
     border-radius: 0%;
     color: black;
 }
 
-#navbar2 a:hover{
+#navbar2 .nav_link:hover{
     color: #ffffff;
 }
 
@@ -276,3 +276,66 @@ footer #social a{
 #text {
     display: none;
 }
+
+.comment{
+    border: 1px solid #5860579c;
+    padding: 3%;
+    border-radius: 7px;
+}
+
+.comment p {
+    margin: 0;
+}
+
+.comment .userName{
+    color: #b15f6a;
+    font-size: large;
+    font-weight: bold;
+}
+
+.comment .time{
+    color: #3f3f3f;
+}
+
+#write {
+    background-color: #e3c7cb;
+    padding: 3%;
+    border-radius: 7px;
+}
+
+.comment {
+    margin: 2% 0px;
+}
+
+#write form input[type=text], form input[type=email], textarea{
+    width: -webkit-fill-available;
+    padding: 10px;
+    border: 1px solid #f2eee6;
+}
+
+#write form input[type=submit]{
+    background-color: #cd717d;
+    border-radius: 7px;
+    border: none;
+    padding: 2%;
+    margin: 2%;
+}
+
+#write form .submit{
+    background-color: #cd717d;
+    border-radius: 7px;
+    border: none;
+    padding: 2%;
+    margin: 2%;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+    color: #2c2929;
+}
+
+#write form .submit:hover{
+    background-color: #7b9771;
+    cursor:pointer;
+}
+
+
