@@ -137,7 +137,39 @@
 
                 <h2 id="Opinions">Opinions!</h2>
 
+                <div id="cs">
 
+                    <div id="write">
+                        <form id="comment_form" method="post" autocomplete="on">
+                            <h3>Leave a reply</h3>
+                            <p>You email address will not be published. Required fields are marked*</p>
+                            
+                            <label for="name">Name *</label><br>
+                            <input type="text" id="name" name="fname">
+                            <label for="email">Email *</label><br>
+                            <input type="email" id="email" name="email">
+                            <label for="comment">Reply *</label><br>
+                            <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
+                            <input type="checkbox" id="cookies">
+                            <label for="cookies">Save my name, email, and website in this browser for the next time I comment.</label> <br>
+                            <input type="checkbox" id="answer">
+                            <label for="answer">Notify me via e-mail if anyone answers my comment</label><br>
+                            <input type="submit" value="Post comment" class="submit" onclick="submitOrNat()">
+
+                        </form>
+                    </div>
+
+                    <div class="comment">
+                        <div>
+                            <p class="userName">User_Name</p>
+                            <p class="time">May 15, 2022 2:43 pm</p>
+                        </div>
+                        <div>
+                            <p>Lorem ipsum dolor sit amet, sodales vitae non eros. Maecenas sollicitudin lectus erat, ut aliquam turpis blandit id. Quisque eget eros ipsum. Donec quis eleifend ex. Quisque dolor felis, elementum porttitor suscipit vel, ullamcorper elementum dolor. Duis hendrerit, ante quis porta dapibus, ligula eros interdum neque, feugiat vulputate velit ex quis ligula. Donec ac mauris in nisl convallis pulvinar. Proin nec facilisis ipsum, a molestie dui. Aenean tincidunt vulputate nibh, id ultrices est porta aliquam. Nunc gravida ex lorem, ut volutpat nisi cursus ac.</p>
+                        </div>
+                    </div>
+
+                </div>
 
 
             </div>
