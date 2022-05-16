@@ -29,3 +29,34 @@ function imgRandom(){
     document.miimagen.src = img[rand1];
 
 }
+
+function submitOrNat(){
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let comment = document.getElementById("comment").value;
+    let submit;
+
+    if (!name){
+        alert("Must enter a valid name");
+    }
+    if (!email){
+        alert("Must enter a valid email direction");
+    }
+    if (!comment){
+        alert("Must write a comment");
+    }
+
+    if (name && email && comment){
+        let father = document.getElementById("cs");
+        let div = document.createElement('div');
+        div.className = 'comment';
+        div.innerHTML = comment.value;
+        
+    }
+
+    let notify = document.getElementById("answer");
+    if (notify.checked){
+        alert("You will be notified when someone answers your comment!");
+    }
+
+}
