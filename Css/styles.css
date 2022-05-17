@@ -307,10 +307,14 @@ footer #social a{
     margin: 2% 0px;
 }
 
+.error{
+    border: 1.5px solid #b15f6a;
+}
+
 #write form input[type=text], form input[type=email], textarea{
     width: -webkit-fill-available;
     padding: 10px;
-    border: 1px solid #f2eee6;
+    /*#f2eee6*/
 }
 
 #write form input[type=submit]{
@@ -337,5 +341,3 @@ footer #social a{
     background-color: #7b9771;
     cursor:pointer;
 }
-
-
