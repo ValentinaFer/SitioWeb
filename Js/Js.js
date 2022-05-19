@@ -67,7 +67,7 @@ function submitOrNat(){
         user.className = 'userName';
         var c = document.createElement('p');
         father.appendChild(div);
-        
+        document.get
         user.innerHTML = name;
         c.innerHTML = comment;
         div.appendChild(user);
