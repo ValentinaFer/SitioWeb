@@ -1,34 +1,56 @@
 
-var imgh;
+var imgh, texth;
 var cont = 0;
 var imgs = [];
+var texts = [];
+imgs[0] = "Css-images/cookies.png";
+imgs[1] = "Css-images/gal.jfif";
+imgs[2] = "Css-images/raspb.jfif";
+texts[0] = "Chocolate chips cookies";
+texts[1] = "Fruit galette";
+texts[2] = "Raspberry hand pies";
 
 function load(){
-    imgs[0] = "Css-images/cookies.png";
-    imgs[1] = "Css-images/gal.jfif";
-    imgs[2] = "Css-images/raspb.jfif";
     imgh = document.getElementById("img-slide");
-    nextImg();  
+    texth = document.getElementById("p-slide");
+    imgh.src = imgs[0];
+    texth.innerHTML = texts[0];
 }
+
+/*
+function slider(dir){
+
+    dir == "left" ? cont--: cont++; 
+    imgh.src = imgs[cont];
+    texth.innerHTML = texts[cont];
+
+    cont > 0 ? cont = imgs.length-1: a; 
+
+}
+*/
 
 function nextImg(){
 
-    imgh.src = imgs[cont];
+    console.log(cont);
     if (cont < imgs.length-1) {
         cont++;
     } else {
         cont = 0;
     }
+    imgh.src = imgs[cont];
+    texth.innerHTML = texts[cont];
 }
 
 function prevImg(){
 
-    imgh.src = imgs[cont];
+    console.log(cont);
     if (cont > 0){
         cont--;
     } else {
         cont = imgs.length-1;
     }
+    imgh.src = imgs[cont];
+    texth.innerHTML = texts[cont];
 
 }
 
