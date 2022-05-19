@@ -17,10 +17,10 @@ function load(){
     texth.innerHTML = texts[0];
 }
 
-/*
+/* (Have yet to try this one, but it definitely looks better)
 function slider(dir){
 
-    dir == "left" ? cont--: cont++; 
+    dir == "left" ? cont--: cont++; cont = imgs.lenght; 
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
 
@@ -32,11 +32,7 @@ function slider(dir){
 function nextImg(){
 
     console.log(cont);
-    if (cont < imgs.length-1) {
-        cont++;
-    } else {
-        cont = 0;
-    }
+    cont < imgs.length-1 ? cont++: cont = 0;
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
 }
@@ -44,11 +40,7 @@ function nextImg(){
 function prevImg(){
 
     console.log(cont);
-    if (cont > 0){
-        cont--;
-    } else {
-        cont = imgs.length-1;
-    }
+    cont > 0 ? cont--: cont = imgs.length-1;
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
 
