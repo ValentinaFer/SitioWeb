@@ -11,7 +11,7 @@
         <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
         <script lang="Javascript" src="Js/Js.js"></script>
     </head>
-    <body>
+    <body onload="load()">
 
         <header>
             <a href="#user" class="btn">
@@ -45,6 +45,16 @@
             <h2>Most popular recipes! </h2>
 
             <img src="Css-images/cookies.png" name="miimagen" style="height: 150px; width: 150px"><form><input type="button" onclick="imgRandom()" value="cambiar"></form>
+
+            <div id="slide">
+                <img src="" id="img-slide">
+                <p id="p-slide">cookies</p>
+                <div>
+                <button class="btn-left" onclick="prevImg()">❮</button>
+                <button class="btn-right" onclick="nextImg()">❯</button>
+                </div>
+            </div>
+
 
             <div class="flex-container">
 

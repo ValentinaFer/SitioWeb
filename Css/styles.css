@@ -341,3 +341,48 @@ footer #social a{
     background-color: #7b9771;
     cursor:pointer;
 }
+
+#slide {
+    background-color: #7b9771;
+    border-radius: 7px;
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    line-height: 0;
+}
+
+#img-slide{
+    width: 100%;
+}
+
+#p-slide{
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+}
+
+.btn-left, .btn-right{
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    background-color: #cd717d7b;
+    margin-top: -2%;
+    border: none;
+    padding: 14px;
+    border-radius: 0px 7px 7px 0px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: large;
+    transition: 0.5s ease;
+}
+
+.btn-right{
+    right: 0;
+    border-radius: 7px 0px 0px 7px;
+}
+
+.btn-left:hover, .btn-right:hover{
+    background-color: #cd717dc9;
+}
