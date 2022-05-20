@@ -31,15 +31,14 @@ function slider(dir){
 
 function nextImg(){
 
-    console.log(cont);
     cont < imgs.length-1 ? cont++: cont = 0;
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
+
 }
 
 function prevImg(){
 
-    console.log(cont);
     cont > 0 ? cont--: cont = imgs.length-1;
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
@@ -63,20 +62,6 @@ function ingredientText(){
         text.style.display = "none";
     }
 }
-
-/*
-function imgRandom(){
-    var img_num = 3;
-    var random_n = Math.random();
-    var rand1 = Math.round((img_num-1)*random_n)+1;
-    img = new Array;
-    img[1] = "Css-images/cookies.png";
-    img[2] = "Css-images/gal.jfif";
-    img[3] = "Css-images/raspb.jfif";
-    document.miimagen.src = img[rand1];
-
-}
-*/
 
 function submitOrNat(){
     var name = document.getElementById("name").value;
@@ -119,13 +104,13 @@ function submitOrNat(){
         alert("correct");
         var father = document.getElementById("cs");
         var div = document.createElement('div');
-        div.className = 'comment';
         var user = document.createElement('p');
-        user.className = 'userName';
         var c = document.createElement('p');
-        father.appendChild(div);
+        div.className = 'comment';
+        user.className = 'userName';
         user.innerHTML = name;
         c.innerHTML = comment;
+        father.appendChild(div);
         div.appendChild(user);
         div.appendChild(c);
         return false;
