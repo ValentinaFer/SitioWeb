@@ -7,10 +7,14 @@ img{
     border-radius: 7px;
 }
 
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Abril Fatface', cursive;
+}
+
 body {
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
-    background-image: url("../Css-images/green.jpg") ;
+    background-image: url("../Css-images/tumblr_841607aa58d0e37a75f7486ff20d8bb4_b51caf95_2048.jpg") ;
     background-color: rgb(187, 223, 187);
     line-height: 1.7;
 }
@@ -352,7 +356,18 @@ footer #social a{
 }
 
 #img-slide{
-    width: 100%;
+    width: 70%;
+    margin-bottom: 88px;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    0% {opacity: .4}
+    100% {opacity: 1}
 }
 
 #p-slide{

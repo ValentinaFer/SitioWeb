@@ -13,8 +13,10 @@ texts[2] = "Raspberry hand pies";
 function load(){
     imgh = document.getElementById("img-slide");
     texth = document.getElementById("p-slide");
+    var slide = document.getElementById("slide");
     imgh.src = imgs[0];
     texth.innerHTML = texts[0];
+    setInterval(nextImg, 3000);
 }
 
 /* (Have yet to try this one, but it definitely looks better)
@@ -34,6 +36,7 @@ function nextImg(){
     cont < imgs.length-1 ? cont++: cont = 0;
     imgh.src = imgs[cont];
     texth.innerHTML = texts[cont];
+    slide.classList.add("fade");
 
 }
 
