@@ -16,7 +16,7 @@ function load(){
     var slide = document.getElementById("slide");
     imgh.src = imgs[0];
     texth.innerHTML = texts[0];
-    setInterval(nextImg, 3000);
+    //setInterval(nextImg, 3000);
 }
 
 /* (Have yet to try this one, but it definitely looks better)

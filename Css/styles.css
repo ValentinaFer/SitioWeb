@@ -7,8 +7,13 @@ img{
     border-radius: 7px;
 }
 
+p{
+    color: #5e5e5e;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: 'Abril Fatface', cursive;
+    color: #4b4b4b;
 }
 
 body {
@@ -68,11 +73,19 @@ header{
 footer {
     background-color: aliceblue;
     padding: 20px;
+}
+
+footer p, footer h2, footer h3{
     color:#cd717d;
 }
 
-h1 {
+header h1{
+    color: #ffffff;
     font-size: 40px;
+}
+
+header p{
+    color: #ffffff;
 }
 
 .fa-solid {
@@ -347,17 +360,21 @@ footer #social a{
 }
 
 #slide {
-    background-color: #7b9771;
+    background-color: #ffffff;
     border-radius: 7px;
     max-width: 80%;
     position: relative;
     margin: auto;
-    line-height: 0;
+    transition: transform .2s;
+}
+
+#slide:hover{
+    transform: scale(1.1);
 }
 
 #img-slide{
     width: 70%;
-    margin-bottom: 88px;
+    border: 5px solid rgb(255, 193, 216);
 }
 
 .fade {
@@ -371,9 +388,7 @@ footer #social a{
 }
 
 #p-slide{
-    color: #ffffff;
-    position: absolute;
-    width: 100%;
+    color: #5e5e5e;
     text-align: center;
     bottom: 5%;
 }
@@ -400,4 +415,17 @@ footer #social a{
 
 .btn-left:hover, .btn-right:hover{
     background-color: #cd717dc9;
+}
+
+.div-slide{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 25%;
+    padding: 3% 2% 3% 4%;
+}
+
+.div-slide h2{
+    color: #4b4b4b;
+    text-align: center;
 }
