@@ -94,7 +94,23 @@ header p{
     background-color: inherit;
 }
 
+navbar ul{
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #e3c7cb;
+}
 
+navbar ul li{
+    display: block;
+    text-decoration: none;
+    float: left;
+    padding: 5px 11px;
+    text-align: center;
+}
+
+/*
 navbar ul {
     width:max-content;
     list-style-type: none;
@@ -118,8 +134,30 @@ navbar ul .nav_link, navbar ul .dropbtn{
     border-top-left-radius: 7px;
 }
 
-.nav_link #search{
-    background-color: #2f4a2a;
+.searchlink{
+    padding: 9.7px;
+}
+
+.searchlink button{
+    border-radius: 50px;
+    min-height: 29px;
+    min-width: 31px;
+    padding: 6px;
+    text-align: center;
+    border: none;
+}
+
+.searchlink input{
+    border-radius: inherit;
+    border: none;
+    padding: 5px;
+    background-color: transparent;
+}
+
+.searchlink #search{
+    background-color: #ecb0b8;
+    padding: 3px;
+    border-radius: 50px;
 }
 
 navbar .nav_link:hover, navbar li, .dropdown-content:hover, .dropdown:hover .dropbtn{
@@ -149,6 +187,7 @@ navbar .nav_link:hover, navbar li, .dropdown-content:hover, .dropdown:hover .dro
     
 }
 
+*/
 
 #content .flex-item{
     position: relative;
@@ -428,4 +467,30 @@ footer #social a{
 .div-slide h2{
     color: #4b4b4b;
     text-align: center;
+}
+
+#snackbar {
+    position: fixed;
+    z-index: 1;
+    bottom: 30px;
+    min-width: 250px;
+    max-width: 300px;
+    margin-left: -150px;
+    left: 50%;
+    background-color: #e3c7cb;
+    border-radius: 7px;
+    text-align: center;
+    padding: 1vh;
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 3.5s;
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity:1 }
+    to {bottom: 0px; opacity: 0;}
 }
