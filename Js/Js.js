@@ -70,6 +70,9 @@ function submitOrNat(){
     var name = document.getElementById("name").value;
     var email = document.getElementById("email").value;
     var comment = document.getElementById("comment").value;
+    var notify = document.getElementById("answer");
+    var cookies = document.getElementById("cookies");
+    
     var submit = [];
     var expresion = /^\w+@\w+(\.\w{3})$/;
 
@@ -95,16 +98,13 @@ function submitOrNat(){
         submit[2] = true;
     }
 
-    let notify = document.getElementById("answer");
-    if (notify.checked){
-        alert("You will be notified when someone answers your comment!");
-    }
-
-    let aux = 0;
+    var aux = 0;
     for (let index = 0; index < submit.length; index++) {(submit[index] ? aux++: aux)};
 
     if (aux === submit.length){
-        alert("correct");
+
+        (notify.checked && cookies.checked) ? snackbar("Thanks! Name and email have been saved, you will be notified when someone answers your comment!"): notify.checked ? snackbar("You will be notified when someone answers your comment!") : cookies.checked ? snackbar("Thank you! name and email have been saved!"): a;
+        
         var father = document.getElementById("cs");
         var div = document.createElement('div');
         var user = document.createElement('p');
@@ -120,4 +120,16 @@ function submitOrNat(){
     }
 
     return false;
+}
+
+function snackbar(message){
+
+    var psb = document.createElement('p');
+    psb.textContent = message;
+    var divsb = document.createElement('div');
+    divsb.id = 'snackbar';
+    divsb.appendChild(psb);
+    document.querySelector('body').appendChild(divsb);
+    setTimeout(function(){document.querySelector('body').removeChild(divsb);}, 4000);
+
 }
