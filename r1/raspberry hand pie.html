@@ -145,11 +145,13 @@
                         <form id="comment_form" method="post" autocomplete="on" onsubmit="return submitOrNat()">
                             <h3>Leave a reply</h3>
                             <p>You email address will not be published. Required fields are marked*</p>
-                            
+                            <div id="error">
+
+                            </div>
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="fname">
                             <label for="email">Email *</label>
-                            <input type="email" id="email" name="email">
+                            <input type="text" id="email" name="email">
                             <label for="comment">Reply *</label>
                             <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
                             <input type="checkbox" id="cookies">

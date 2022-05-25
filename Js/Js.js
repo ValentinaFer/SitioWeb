@@ -72,7 +72,6 @@ function submitOrNat(){
     var comment = document.getElementById("comment").value;
     var notify = document.getElementById("answer");
     var cookies = document.getElementById("cookies");
-    
     var submit = [];
     var expresion = /^\w+@\w+(\.\w{3})$/;
 
@@ -103,7 +102,7 @@ function submitOrNat(){
 
     if (aux === submit.length){
 
-        (notify.checked && cookies.checked) ? snackbar("Thanks! Name and email have been saved, you will be notified when someone answers your comment!"): notify.checked ? snackbar("You will be notified when someone answers your comment!") : cookies.checked ? snackbar("Thank you! name and email have been saved!"): a;
+        (notify.checked && cookies.checked) ? snackbar("Thanks! Name and email have been saved, you will be notified when someone answers your comment!"): notify.checked ? snackbar("You will be notified when someone answers your comment!") : cookies.checked ? snackbar("Thank you! name and email have been saved!"): false;
         
         var father = document.getElementById("cs");
         var div = document.createElement('div');
