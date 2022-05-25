@@ -1,50 +1,56 @@
 
-var imgh, texth;
+var imgh, texth, h;
 var cont = 0;
-var imgs = [];
-var texts = [];
-imgs[0] = "Css-images/cookies.png";
-imgs[1] = "Css-images/gal.jfif";
-imgs[2] = "Css-images/raspb.jfif";
-texts[0] = "Chocolate chips cookies";
-texts[1] = "Fruit galette";
-texts[2] = "Raspberry hand pies";
+var recipe = [];
+recipe.push({
+    img: "Css-images/cookies.png",
+    tittle: "Chocolate chips cookies",
+    p: "As an afternoon snack or to satisfy a midnight craving, the classic chocolate chips cookies are a master key snack to any time of the day. Easy to make and certainly not time consuming.",
+    page: "#a"
+});
+recipe.push({
+    img: "Css-images/gal.jfif",
+    tittle: "Fruit galette",
+    p: "One of the symbols of summer, but as long as you have access to fruit, you have a perfectly good excuse to make a galette during the winter. This galette starts with apples, but feel free to add any other fruits you have on hand.",
+    page: "#b"
+})
+recipe.push({
+    img: "Css-images/raspb.jfif",
+    tittle: "Raspberry hand pies",
+    p: "These raspberry hand pies, also known as turnovers, are the perfect combination of sweetness from the raspberry filling and saltiness from the flaky crust. Ideal for a picnic or just as an afternoon treat.",
+    page: "r1/raspberry hand pie.html"
+})
+
 
 function load(){
     imgh = document.getElementById("img-slide");
     texth = document.getElementById("p-slide");
-    var slide = document.getElementById("slide");
-    imgh.src = imgs[0];
-    texth.innerHTML = texts[0];
-    //setInterval(nextImg, 3000);
+    h = document.getElementById("h-slide");
+    a = document.querySelector("#slide a");
+
+    set_slide(0);
+    setInterval(nextImg, 3000);
+   // setInterval(slide.classList.remove("fade"),3000);
 }
 
-/* (Have yet to try this one, but it definitely looks better)
-function slider(dir){
-
-    dir == "left" ? cont--: cont++; cont = imgs.lenght; 
-    imgh.src = imgs[cont];
-    texth.innerHTML = texts[cont];
-
-    cont > 0 ? cont = imgs.length-1: a; 
-
+function set_slide(i){
+    imgh.src = recipe[i].img;
+    h.innerHTML = recipe[i].tittle;
+    texth.innerHTML = recipe[i].p;
+    a.href = recipe[i].page;
 }
-*/
 
 function nextImg(){
 
-    cont < imgs.length-1 ? cont++: cont = 0;
-    imgh.src = imgs[cont];
-    texth.innerHTML = texts[cont];
+    cont < recipe.length-1 ? cont++: cont = 0;
+    set_slide(cont);
     slide.classList.add("fade");
-
 }
 
 function prevImg(){
 
-    cont > 0 ? cont--: cont = imgs.length-1;
-    imgh.src = imgs[cont];
-    texth.innerHTML = texts[cont];
+    cont > 0 ? cont--: cont = recipe.length-1;
+    set_slide(cont);
 
 }
 

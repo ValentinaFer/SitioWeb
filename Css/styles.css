@@ -189,44 +189,15 @@ navbar .nav_link:hover, navbar li, .dropdown-content:hover, .dropdown:hover .dro
 
 */
 
-#content .flex-item{
-    position: relative;
-    margin: 30px 0px;
-    padding: 20px;
-    width: 50%;
-    min-height: 200px;
-    min-width: 300px;
-    background-color: #beceb4;
-    border-radius: 7px;
-    line-height: normal;
-    box-shadow: 10px 10px 10px rgb(160 175 185);
-    transition: transform .2s;
-}
-
-.flex-item:hover{
-    transform: scale(1.1);
-}
-
-#content .flex-item p {
-    min-width: 200px;
-}
-
-.flex-item img {
-    float: right;
-    width: 100%;
-    height: 100%;
-    border-radius:7px;
-    margin: 0px 0px 5px 60px;
-    margin-bottom: inherit;
-}
-
-#link{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    left: 0%;
-    z-index: 1;
+#slide a{
+    margin: 0 auto;
+    display: block;
+    background-color: #daeeed;
+    color: #4b4b4b;
+    padding: 1% 4%;
+    border-radius: 20px;
+    width: max-content;
+    text-decoration: none;
 }
 
 .flex-container {
@@ -401,7 +372,11 @@ footer #social a{
 #slide {
     background-color: #ffffff;
     border-radius: 7px;
-    max-width: 80%;
+    width: 70%;
+    min-height: 400px;
+    padding: 9px;
+    flex-direction: column;
+    display: flex;
     position: relative;
     margin: auto;
     transition: transform .2s;
@@ -412,8 +387,10 @@ footer #social a{
 }
 
 #img-slide{
-    width: 70%;
-    border: 5px solid rgb(255, 193, 216);
+    width: 97%;
+    height: 100%;
+    margin: auto;
+    border: 3px solid rgb(255, 193, 216);
 }
 
 .fade {
@@ -430,6 +407,7 @@ footer #social a{
     color: #5e5e5e;
     text-align: center;
     bottom: 5%;
+    line-height: normal;
 }
 
 .btn-left, .btn-right{
@@ -447,6 +425,10 @@ footer #social a{
     transition: 0.5s ease;
 }
 
+.btn-left{
+    left: 0;
+}
+
 .btn-right{
     right: 0;
     border-radius: 7px 0px 0px 7px;
@@ -457,16 +439,16 @@ footer #social a{
 }
 
 .div-slide{
-    position: absolute;
     right: 0;
     top: 0;
-    max-width: 25%;
-    padding: 3% 2% 3% 4%;
+    padding: 2%;
 }
 
 .div-slide h2{
-    color: #4b4b4b;
+    color: #cd717d;
     text-align: center;
+    line-height: normal;
+    margin-top: unset;
 }
 
 #snackbar {
@@ -493,4 +475,15 @@ footer #social a{
 @keyframes fadeout {
     from {bottom: 30px; opacity:1 }
     to {bottom: 0px; opacity: 0;}
+}
+
+.h-heart span::before, .h-heart span::after{
+    background: url("../Css-images/heart.png") no-repeat;
+   background-size: 100% auto;
+   content: "";
+   display: inline-block;
+   position: relative;
+   width: 30px;
+   height: 40px;
+   top: 15px;
 }
