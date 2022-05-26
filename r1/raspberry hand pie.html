@@ -145,19 +145,22 @@
                         <form id="comment_form" method="post" autocomplete="on" onsubmit="return submitOrNat()">
                             <h3>Leave a reply</h3>
                             <p>You email address will not be published. Required fields are marked*</p>
-                            <div id="error">
-
-                            </div>
+                            <ul id="errors">
+                            </ul>
                             <label for="name">Name *</label>
                             <input type="text" id="name" name="fname">
                             <label for="email">Email *</label>
                             <input type="text" id="email" name="email">
                             <label for="comment">Reply *</label>
                             <textarea id="comment" name="comment" rows="10" cols="30"></textarea>
-                            <input type="checkbox" id="cookies">
-                            <label for="cookies">Save my name, email, and website in this browser for the next time I comment.</label><br>
-                            <input type="checkbox" id="answer">
-                            <label for="answer">Notify me via e-mail if anyone answers my comment</label><br>
+                            <label class="container" for="cookies">Save my name, email, and website in this browser for the next time I comment.
+                                <input type="checkbox" id="cookies">
+                                <span class="cb"></span>
+                            </label>
+                            <label class="container" for="answer">Notify me via e-mail if anyone answers my comment
+                                <input type="checkbox" id="answer">
+                                <span class="cb"></span>
+                            </label>
                             <input type="submit" value="Post comment" class="submit">
 
                         </form>
