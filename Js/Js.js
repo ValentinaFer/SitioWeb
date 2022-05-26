@@ -30,7 +30,9 @@ function load(){
 
     set_slide(0);
     setInterval(nextImg, 3000);
-   // setInterval(slide.classList.remove("fade"),3000);
+    //setInterval(slide.classList = "",5000);
+    //setInterval(slide.classList.add("fade"),3000);
+    
 }
 
 function set_slide(i){
@@ -44,7 +46,6 @@ function nextImg(){
 
     cont < recipe.length-1 ? cont++: cont = 0;
     set_slide(cont);
-    slide.classList.add("fade");
 }
 
 function prevImg(){

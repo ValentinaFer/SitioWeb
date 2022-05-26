@@ -101,13 +101,13 @@ navbar ul{
     margin: 0;
     padding: 0;
     list-style: none;
-    background-color: #e3c7cb;
+    background-color: #ffffff;
 }
 
-navbar ul li{
-    display: block;
+navbar ul li a{
     text-decoration: none;
     float: left;
+    color: #cd717d;
     padding: 5px 11px;
     text-align: center;
 }
