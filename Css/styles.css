@@ -51,8 +51,8 @@ header, body, footer{
 #content {
     position: relative;
     background-color: aliceblue;
-    padding: 5%;
-    border-radius: 0px 7px 7px 7px;
+    padding: 4% 5% 5% 5%;
+    border-radius: 0px 0px 7px 7px;
 }
 
 header, footer {
@@ -97,6 +97,9 @@ header p{
 }
 
 navbar ul{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     overflow: auto;
     margin: 0;
     padding: 0;
@@ -104,12 +107,17 @@ navbar ul{
     background-color: #ffffff;
 }
 
-navbar ul li a{
+navbar ul li .nav_link{
     text-decoration: none;
     float: left;
     color: #cd717d;
-    padding: 5px 11px;
+    padding: 8px 19px;
     text-align: center;
+}
+
+navbar li .nav_link:hover{
+    background-color: #cd717d;
+    color: #ffffff;
 }
 
 /*
