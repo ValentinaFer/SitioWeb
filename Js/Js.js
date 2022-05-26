@@ -6,13 +6,13 @@ recipe.push({
     img: "Css-images/cookies.png",
     tittle: "Chocolate chips cookies",
     p: "As an afternoon snack or to satisfy a midnight craving, the classic chocolate chips cookies are a master key snack to any time of the day. Easy to make and certainly not time consuming.",
-    page: "#a"
+    page: "r2/chocolate_chips_cookies.html"
 });
 recipe.push({
     img: "Css-images/gal.jfif",
     tittle: "Fruit galette",
     p: "Symbols of summer, but as long as you have access to fruit, you have a perfectly good excuse to make a galette during the winter. This galette starts with apples, but feel free to add any other fruits.",
-    page: "#b"
+    page: "r3/fruit_galette.html"
 })
 recipe.push({
     img: "Css-images/raspb.jfif",

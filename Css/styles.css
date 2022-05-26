@@ -97,55 +97,70 @@ header p{
 }
 
 navbar ul{
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    overflow: auto;
+    overflow: hidden;
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style-type: none;
     background-color: #ffffff;
 }
 
-navbar ul li .nav_link{
+.nav_link{
     text-decoration: none;
     float: left;
+    display: block;
     color: #cd717d;
     padding: 8px 19px;
     text-align: center;
 }
 
-navbar li .nav_link:hover{
+navbar .nav_link:hover, .drop:hover .drop_btn{
     background-color: #cd717d;
     color: #ffffff;
 }
 
-/*
-navbar ul {
-    width:max-content;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: auto;
-    border-radius: 7px 7px 0px 0px;
-}
-
-navbar li {
+.drop{
     float: left;
+    overflow: hidden;
 }
 
-navbar ul .nav_link, navbar ul .dropbtn{
-    display: inline-block;
-    color: white;
-    padding: 13px 16px 15px;
-    text-decoration: none;
-    background-color: #7b9771;
-    border-top-right-radius: 7px;
-    border-top-left-radius: 7px;
+.drop .drop_btn{
+    background-color: transparent;
+    border: none;
+    color: #cd717d;
+    padding: 12px 19px;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
 }
 
-.searchlink{
-    padding: 9.7px;
+.drop_btn i{
+    margin-left: 9px;
+}
+
+.drop_content{
+    min-width: 112px;
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    z-index: 1;
+}
+
+.drop_content .nav_link{
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+.drop:hover .drop_content{
+    display: block;
+}
+
+navbar .searchlink{
+    padding: 4px 19px;
+}
+
+navbar .searchlink:hover{
+    background-color: transparent;
 }
 
 .searchlink button{
@@ -164,40 +179,15 @@ navbar ul .nav_link, navbar ul .dropbtn{
     background-color: transparent;
 }
 
+.searchlink input:focus-visible{
+    outline: none;
+}
+
 .searchlink #search{
     background-color: #ecb0b8;
     padding: 3px;
     border-radius: 50px;
 }
-
-navbar .nav_link:hover, navbar li, .dropdown-content:hover, .dropdown:hover .dropbtn{
-    background-color:#cd717d;
-    border-radius: inherit;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-}
-
-.dropdown-content .nav_link{
-    display: block;
-    border-radius: 0%;
-    position: relative;
-    z-index: 1;
-    padding: 12px 16px;
-}
-
-.dropdown-content .nav_link:hover {
-    background-color:#cd717d;
-    border-radius: 0%;
-}
-.dropdown:hover .dropdown-content{
-    display:block;
-    
-}
-
-*/
 
 #slide a{
     margin: 0 auto;
@@ -231,17 +221,10 @@ hr{
     margin-top: 1%;
 }
 
-#navbar2 .nav_link{
-    border-radius: 0%;
-    color: black;
-}
-
-#navbar2 .nav_link:hover{
-    color: #ffffff;
-}
-
 #content #recipe_img {
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin: auto;
 }
 
 #body2 ol li{
@@ -268,7 +251,7 @@ footer a:hover{
     text-decoration: underline;
 }
 
-footer .fc{
+.fc{
     display: flex;
     flex-direction: row;
     justify-content:center;
