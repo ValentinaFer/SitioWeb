@@ -11,7 +11,7 @@ recipe.push({
 recipe.push({
     img: "Css-images/gal.jfif",
     tittle: "Fruit galette",
-    p: "One of the symbols of summer, but as long as you have access to fruit, you have a perfectly good excuse to make a galette during the winter. This galette starts with apples, but feel free to add any other fruits you have on hand.",
+    p: "Symbols of summer, but as long as you have access to fruit, you have a perfectly good excuse to make a galette during the winter. This galette starts with apples, but feel free to add any other fruits.",
     page: "#b"
 })
 recipe.push({
@@ -73,38 +73,52 @@ function ingredientText(){
 }
 
 function submitOrNat(){
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var comment = document.getElementById("comment").value;
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var comment = document.getElementById("comment");
     var notify = document.getElementById("answer");
     var cookies = document.getElementById("cookies");
+    var ul_errors = document.querySelector("#errors");
     var submit = [];
+    var errors = [];
+    errors.push ("Must introduce a valid name");
+    errors.push ("Must introduce a valid email direction");
+    errors.push("Must introduce a comment!");
     var expresion = /^\w+@\w+(\.\w{3})$/;
 
-    if (!name){
-        document.getElementById("name").classList.add('error');
+    if (!name.value.trim()){
+        name.classList.add('error');
         submit[0] = false;
     } else {
-        document.getElementById("name").classList.remove('error');
+        name.classList.remove('error');
         submit[0] = true;
     }
-    if (!expresion.test(email)){
-        document.getElementById("email").classList.add('error');
+    if (!expresion.test(email.value.trim())){
+        email.classList.add('error');
         submit[1] = false;
     } else {
-        document.getElementById("email").classList.remove('error');
+        email.classList.remove('error');
         submit[1] = true;
     }
-    if (!comment){
-        document.getElementById("comment").classList.add('error');
+    if (!comment.value.trim()){
+        comment.classList.add('error');
         submit[2] = false;
     } else {
-        document.getElementById("comment").classList.remove('error');
+        comment.classList.remove('error');
         submit[2] = true;
     }
 
     var aux = 0;
-    for (let index = 0; index < submit.length; index++) {(submit[index] ? aux++: aux)};
+    ul_errors.innerHTML = "";
+    for (let index = 0; index < submit.length; index++) {
+        if (submit[index]){
+            aux++
+        } else {
+            var li = document.createElement("li");
+            li.innerHTML = errors[index];
+            ul_errors.appendChild(li);
+        }
+    };
 
     if (aux === submit.length){
 
@@ -116,8 +130,8 @@ function submitOrNat(){
         var c = document.createElement('p');
         div.className = 'comment';
         user.className = 'userName';
-        user.innerHTML = name;
-        c.innerHTML = comment;
+        user.innerHTML = name.value;
+        c.innerHTML = comment.value;
         father.appendChild(div);
         div.appendChild(user);
         div.appendChild(c);
