@@ -66,7 +66,7 @@ header, footer {
 }
 
 header{
-    background-image: url(../Css-images/Canva\ -\ Rustic\ Farmhouse\ Kitchen\ \(1\).jpg);
+    background-image: url(../Css-images/header2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -81,13 +81,14 @@ footer p, footer h2, footer h3{
 }
 
 header h1{
-    color: #ffffff;
+    margin-bottom: 0;
+    color: #53616d;
     font-size: 40px;
 }
 
 header p{
-    color: #ffffff;
     text-align: center;
+    font-weight: bold;
 }
 
 .fa-solid {
