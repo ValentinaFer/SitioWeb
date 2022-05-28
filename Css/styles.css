@@ -109,7 +109,7 @@ navbar ul{
     text-decoration: none;
     float: left;
     display: block;
-    color: #cd717d;
+    color: #385b5a;
     padding: 8px 19px;
     text-align: center;
 }
@@ -127,7 +127,7 @@ navbar .nav_link:hover, .drop:hover .drop_btn{
 .drop .drop_btn{
     background-color: transparent;
     border: none;
-    color: #cd717d;
+    color: #385b5a;
     padding: 12px 19px;
     margin: 0;
     font-family: inherit;
@@ -198,7 +198,7 @@ navbar .searchlink:hover{
 
 #content #body2{
     /*box-shadow: 10px 10px 10px rgba(92, 131, 143, 0.406);*/
-    background-color: #b4cec0;
+    background-color: #fefefe;
     padding: inherit;
     border-radius: inherit;
 }
@@ -212,7 +212,8 @@ hr{
 }
 
 #content #recipe_img {
-    width: 80%;
+    width: 60vw;
+    height: 40vw;
     display: block;
     margin: auto;
 }
@@ -224,6 +225,7 @@ hr{
 .fc{
     display: flex;
     flex-direction: row;
+    align-items: stretch;
     justify-content:space-evenly;
 }
 
@@ -316,7 +318,7 @@ footer #social a{
 }
 
 #write {
-    background-color: #e3c7cb;
+    background-color: #d9eeed;
     padding: 3%;
     border-radius: 7px;
 }
@@ -390,7 +392,7 @@ footer #social a{
     transition: transform .2s;
 }
 
-.slide:hover{
+.fc .slide:hover{
     transform: scale(1.1);
 }
 
