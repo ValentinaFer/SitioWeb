@@ -189,17 +189,6 @@ navbar .searchlink:hover{
     border-radius: 50px;
 }
 
-#slide a{
-    margin: 0 auto;
-    display: block;
-    background-color: #daeeed;
-    color: #4b4b4b;
-    padding: 1% 4%;
-    border-radius: 20px;
-    width: max-content;
-    text-decoration: none;
-}
-
 .flex-container {
     display: flex;
     flex-direction: column;
@@ -231,6 +220,14 @@ hr{
     background-color: transparent;
 }
 
+.fc{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+/*-----------------[Footer]-----------------*/
+
 footer a:link{
     color: #cd717d;
     text-decoration: none;
@@ -251,9 +248,7 @@ footer a:hover{
     text-decoration: underline;
 }
 
-.fc{
-    display: flex;
-    flex-direction: row;
+footer .fc{
     justify-content:center;
 }
 
@@ -292,6 +287,8 @@ footer li{
 footer #social a{
     margin: 10px;
 }
+
+/*-----------------[comment section]-----------------*/
 
 #text {
     display: none;
@@ -362,7 +359,24 @@ footer #social a{
     cursor:pointer;
 }
 
-#slide {
+#errors{
+    color: #661f29;
+}
+
+/*------------[SLIDE AND CARD]--------------*/
+
+.readmore{
+    margin: 0 auto;
+    display: block;
+    background-color: #daeeed;
+    color: #4b4b4b;
+    padding: 1% 4%;
+    border-radius: 20px;
+    width: max-content;
+    text-decoration: none;
+}
+
+.slide {
     background-color: #ffffff;
     border-radius: 7px;
     width: 70%;
@@ -375,11 +389,11 @@ footer #social a{
     transition: transform .2s;
 }
 
-#slide:hover{
+.slide:hover{
     transform: scale(1.1);
 }
 
-#img-slide{
+.img-slide{
     width: 97%;
     height: 40vw;
     margin: auto;
@@ -396,7 +410,7 @@ footer #social a{
     100% {opacity: 1}
 }
 
-#p-slide{
+.p-slide{
     color: #5e5e5e;
     text-align: center;
     bottom: 5%;
@@ -437,12 +451,23 @@ footer #social a{
     padding: 2%;
 }
 
-.div-slide h2{
+.h-slide{
     color: #cd717d;
     text-align: center;
     line-height: normal;
     margin-top: unset;
 }
+
+.fc .img-slide{
+    height: 20vw;
+}
+
+.fc .slide{
+    margin: 10px 13px;
+    min-height: unset;
+}
+
+/*-----------------[SNACKBAR]-----------------*/
 
 #snackbar {
     position: fixed;
@@ -470,6 +495,8 @@ footer #social a{
     to {bottom: 0px; opacity: 0;}
 }
 
+/*-----------------[h with hearts]-----------------*/
+
 .h-heart span::before, .h-heart span::after{
     background: url("../Css-images/heart.png") no-repeat;
    background-size: 100% auto;
@@ -481,9 +508,7 @@ footer #social a{
    top: 15px;
 }
 
-#errors{
-    color: #661f29;
-}
+/*-----------------[chechbox with hearts]-----------------*/
 
 .container{
     display: inline-block;
