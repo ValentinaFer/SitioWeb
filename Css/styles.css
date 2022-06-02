@@ -71,15 +71,6 @@ header{
     background-size: cover;
 }
 
-footer {
-    background-color: aliceblue;
-    padding: 20px;
-}
-
-footer p, footer h2, footer h3{
-    color:#cd717d;
-}
-
 header h1{
     margin-bottom: 0;
     color: #53616d;
@@ -96,6 +87,8 @@ header p{
     height: inherit;
     background-color: inherit;
 }
+
+/*------------------[NAVBAR]---------------------*/
 
 navbar {
     position: fixed;
@@ -244,6 +237,15 @@ hr{
 
 /*-----------------[Footer]-----------------*/
 
+footer {
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+footer p, footer h2, footer h3{
+    color:#cd717d;
+}
+
 footer a:link{
     color: #cd717d;
     text-decoration: none;
@@ -378,6 +380,16 @@ form .submit:hover{
 #errors{
     color: #661f29;
 }
+
+#ing input{
+    display: block;
+    float: left;
+}
+
+#ing label{
+    display: block;
+}
+
 /*------------------LOGIN--------------------*/
 
 #content_log{
@@ -406,7 +418,7 @@ form .submit:hover{
     border-radius: 7px;
 }
 
-/*------------[SLIDE AND CARD]--------------*/
+/*------------[SLIDE AND RECIPEs CARD]--------------*/
 
 .readmore{
     margin: 0 auto;
