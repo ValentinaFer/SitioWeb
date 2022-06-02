@@ -97,6 +97,19 @@ header p{
     background-color: inherit;
 }
 
+navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#navbar2{
+    position: inherit;
+    z-index: 0;
+}
+
 navbar ul{
     overflow: hidden;
     margin: 0;
@@ -212,7 +225,7 @@ hr{
 }
 
 #content #recipe_img {
-    width: 60vw;
+    width: 50vw;
     height: 40vw;
     display: block;
     margin: auto;
@@ -331,13 +344,13 @@ footer #social a{
     border: 2px solid #b15f6a;
 }
 
-#write form input[type=text], form input[type=email], textarea{
+form input[type=text], form input[type=email], textarea{
     width: -webkit-fill-available;
     padding: 10px;
     /*#f2eee6*/
 }
 
-#write form input[type=submit]{
+form input[type=submit]{
     background-color: #cd717d;
     border-radius: 7px;
     border: none;
@@ -345,7 +358,7 @@ footer #social a{
     margin: 2%;
 }
 
-#write form .submit{
+form .submit{
     background-color: #cd717d;
     border-radius: 7px;
     border: none;
@@ -357,13 +370,40 @@ footer #social a{
     color: #2c2929;
 }
 
-#write form .submit:hover{
+form .submit:hover{
     background-color: #7b9771;
     cursor:pointer;
 }
 
 #errors{
     color: #661f29;
+}
+/*------------------LOGIN--------------------*/
+
+#content_log{
+    background-color: aliceblue;
+    border-radius: 7px;
+    padding: 4% 5% 5% 5%;
+    margin: 7% auto;
+    width: 50%;
+}
+
+#content_log form{
+    padding: 3%;
+    border: 3px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+#content_log button{
+    width: max-content;
+    margin: auto;
+    padding: 2%;
+    background-color: #fefefe;
+    color: #2c2929;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
 }
 
 /*------------[SLIDE AND CARD]--------------*/

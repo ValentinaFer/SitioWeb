@@ -29,9 +29,7 @@ function load(){
     a = document.querySelector("#slide a");
 
     set_slide(0);
-    setInterval(nextImg, 3000);
-    //setInterval(slide.classList = "",5000);
-    //setInterval(slide.classList.add("fade"),3000);
+    setInterval(nextImg, 4000);
     
 }
 
@@ -73,6 +71,76 @@ function ingredientText(){
     }
 }
 
+var errores = {
+    nombre_invalido: "You must introduce a valid name.",
+    email_invalido: "You must introduce a valid email.",
+    comentario_invalido: "You must introduce a valid comment."
+}
+
+function submitOrNat(){
+    var name = document.getElementById("name");
+    name.classList.remove('error');
+    var email = document.getElementById("email");
+    email.classList.remove('error');
+    var comment = document.getElementById("comment");
+    comment.classList.remove('error');
+    var notify = document.getElementById("answer");
+    var cookies = document.getElementById("cookies");
+    var ul_errors = document.querySelector("#errors");
+
+    var expresion = /^\w+@\w+(\.\w{3})$/;
+    var error = [];
+
+    if (!name.value.trim()){
+        error.push(errores.nombre_invalido);
+        name.classList.add("error");
+    } 
+    if (!expresion.test(email.value.trim())){
+        error.push(errores.email_invalido);
+        email.classList.add('error');
+    }
+    if (!comment.value.trim()){
+        error.push(errores.comentario_invalido);
+        comment.classList.add("error");
+    }
+
+    ul_errors.innerHTML = "";
+
+    if (error.length == 0){
+
+        if (notify.checked && cookies.checked) {
+            snackbar("Thanks! Name and email have been saved, you will be notified when someone answers your comment!")
+        } else if (notify.checked){
+            snackbar("You will be notified when someone answers your comment!")
+        } else if (cookies.checked){
+            snackbar("Thank you! name and email have been saved!")
+        } 
+
+        var father = document.getElementById("cs");
+        var div = document.createElement('div');
+        var user = document.createElement('p');
+        var c = document.createElement('p');
+        div.className = 'comment';
+        user.className = 'userName';
+        user.innerHTML = name.value;
+        c.innerHTML = comment.value;
+        father.appendChild(div);
+        div.appendChild(user);
+        div.appendChild(c);
+
+        return false; //true!
+    } else {
+        for (let i = 0; i < error.length; i++){
+            var li = document.createElement("li");
+            li.innerHTML = error[i];
+            ul_errors.appendChild(li);
+        }
+        return false;
+    }
+
+}
+
+/*
 function submitOrNat(){
     var name = document.getElementById("name");
     var email = document.getElementById("email");
@@ -141,6 +209,7 @@ function submitOrNat(){
 
     return false;
 }
+*/
 
 function snackbar(message){
 
