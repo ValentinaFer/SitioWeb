@@ -44,12 +44,31 @@
         <div id="content_log">
             <form method="post" id="log_in">
                 <h2>Log-in!</h2>
-                <input type="text" id="name" name="name" placeholder="Username or email">
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="Email">
+                <label for="password">Password: </label>
                 <input type="text" id="password" name="password" placeholder="password"> 
                 <input type="submit">
                 <hr>
-                <button>Already have an account?</button>
+                <button>Don't have an account? sign up!</button>
             </form>
+            <form method="post" id="sign_up">
+                <h2>Log-in!</h2>
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="email">
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="username">
+                <label for="age">Age: </label>
+                <input type="number" id="age" name="age">
+                <label for="password">Password: </label>
+                <input type="text" id="password" name="password" placeholder="password">
+                <input type="checkbox" id="tac" name="tac">
+                <label for="tac">Agree with terms and condition that usually nobody reads.</label> 
+                <input type="submit">
+                <hr>
+                <button>Already have an account? log in!</button>
+            </form>
+
         </div>
 
 
