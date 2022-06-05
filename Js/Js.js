@@ -74,7 +74,11 @@ function ingredientText(){
 var errores = {
     nombre_invalido: "You must introduce a valid name.",
     email_invalido: "You must introduce a valid email.",
-    comentario_invalido: "You must introduce a valid comment."
+    comentario_invalido: "You must introduce a valid comment.",
+    edad_invalida: "You must be at least 13 years old!",
+    password_vacio: "You must introduce a valid password!",
+    password_corto: "Your password must have at least 8 characters!",
+    terminosYcondiciones: "You must agree to our Terms and Conditions."
 }
 
 function submitOrNat(){
@@ -87,6 +91,8 @@ function submitOrNat(){
     var notify = document.getElementById("answer");
     var cookies = document.getElementById("cookies");
     var ul_errors = document.querySelector("#errors");
+    const date = new Date();
+    var d = date.toLocaleDateString();
 
     var expresion = /^\w+@\w+(\.\w{3})$/;
     var error = [];
@@ -120,12 +126,16 @@ function submitOrNat(){
         var div = document.createElement('div');
         var user = document.createElement('p');
         var c = document.createElement('p');
+        var time = document.createElement('p');
         div.className = 'comment';
         user.className = 'userName';
+        time.classList.add("time");
         user.innerHTML = name.value;
+        time.innerHTML = d;
         c.innerHTML = comment.value;
         father.appendChild(div);
         div.appendChild(user);
+        div.appendChild(time);
         div.appendChild(c);
 
         return false; //true!
@@ -150,4 +160,131 @@ function snackbar(message){
     document.querySelector('body').appendChild(divsb);
     setTimeout(function(){document.querySelector('body').removeChild(divsb);}, 4000);
 
+}
+
+function loginValidation(){
+
+    var mail = document.getElementById("email1");
+    var pswrd = document.getElementById("password1");
+    pswrd.classList.remove("error");
+    mail.classList.remove("error");
+    var ul = document.getElementById("loginErrors");
+    ul.innerHTML = "";
+    err = [];
+
+    if (!email("email1")){
+        err.push(errores.email_invalido);
+    }
+    if (!username("password1")){
+        err.push(errores.password_vacio);
+    }
+    if (pswrd.value.trim().length < 8){
+        err.push("Passwords have at least 8 characters");
+        pswrd.classList.add("error");
+    }
+
+    if (err.length == 0){
+        var form = document.getElementById("log_in");
+        form.classList.add("hide");
+        var c = document.getElementById("content_log");
+        var p = document.createElement("p");
+        p.innerHTML = "Login succesfully :D";
+        c.appendChild(p);
+        return false; //true!
+    } else {
+        for (let i = 0; i < err.length; i++){
+            var li = document.createElement("li");
+            li.innerHTML = err[i];
+            ul.appendChild(li);
+        }
+    }
+    return false;
+}
+
+function signValidation(){
+
+    var ul = document.getElementById("signErrors");
+    var sn = document.getElementById("username");
+    var mail = document.getElementById("email2");
+    var age = document.getElementById("age");
+    var pswrd = document.getElementById("password2");
+    pswrd.classList.remove("error");
+    age.classList.remove("error");
+    mail.classList.remove("error");
+    sn.classList.remove("error");
+    ul.innerHTML = "";
+    err = [];
+
+    if (!username("username")){
+        err.push(errores.nombre_invalido);
+    }
+    if (!email("email2")){
+        err.push(errores.email_invalido);
+    }
+    if (!agge("age")){
+        err.push(errores.edad_invalida);
+    }
+
+    //username() just checks if it's not empty that's why i also use it to check password 
+    if (!username("password2")){
+        err.push(errores.password_vacio);
+    }
+    if (pswrd.value.trim().length < 8){
+        err.push(errores.password_corto);
+        pswrd.classList.add("error");
+    }
+
+    tC = document.getElementById("tac");
+    if (!tC.checked){
+        err.push(errores.terminosYcondiciones);
+    }
+
+    if (err.length == 0){
+        var form = document.getElementById("sign_up");
+        form.classList.add("hide");
+        var c = document.getElementById("content_log");
+        var p = document.createElement("p");
+        p.innerHTML = "Your account has been created succesfully! Thanks for joining! :) ";
+        c.appendChild(p);
+        return false; //true!
+    } else {
+        for (let i = 0; i < err.length; i++){
+            var li = document.createElement("li");
+            li.innerHTML = err[i];
+            ul.appendChild(li);
+        }
+    }
+    return false;
+
+}
+
+//decided to break down each part of the login/signup form validation!
+//but decided to keep the comment section form validation in one function!
+
+function agge(id){
+    var age = document.getElementById(id); 
+    if (!isNaN(age.value.trim()) && +age.value.trim() < 13){
+        age.classList.add("error");
+        return false;
+    }
+    return true;
+}
+
+function email(id){
+    var mail = document.getElementById(id);
+    var expresion = /^\w+@\w+(\.\w{3})$/;
+    if (!expresion.test(mail.value.trim())){
+        mail.classList.add("error");
+        return false;
+    }
+    return true;
+}
+
+function username(id){
+    var nom = document.getElementById(id);
+    if (!nom.value.trim()){
+        nom.classList.add("error");
+        return false;
+    }
+    return true;
 }
