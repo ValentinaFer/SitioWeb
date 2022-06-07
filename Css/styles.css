@@ -350,10 +350,9 @@ footer #social a{
     border: 2px solid #b15f6a;
 }
 
-form input[type=text], form input[type=email], textarea{
+form input[type=text], form input[type=email], textarea, form input[type=password], form input[type=number]{
     width: -webkit-fill-available;
     padding: 10px;
-    /*#f2eee6*/
 }
 
 form input[type=submit]{
@@ -362,6 +361,7 @@ form input[type=submit]{
     border: none;
     padding: 2%;
     margin: 2%;
+    cursor: pointer;
 }
 
 form .submit{
