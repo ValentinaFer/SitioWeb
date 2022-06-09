@@ -188,11 +188,13 @@ function loginValidation(){
         var form = document.getElementById("log_in");
         form.classList.add("hide");
         var c = document.getElementById("content_log");
-        var p = document.createElement("p");
-        var p1 = document.createElement("p");
-        p.innerHTML = "Login succesfully :D";
-        c.appendChild(p);
-        c.appendChild(p1);
+        var h = document.createElement("h2");
+        h.classList.add("h-heart");
+        h.classList.add("center");
+        var span = document.createElement("span");
+        span.innerHTML = "Login succesfully :D";
+        h.appendChild(span);
+        c.appendChild(h);
         return false; //true!
 
     } else {
@@ -246,10 +248,13 @@ function signValidation(){
         var form = document.getElementById("sign_up");
         form.classList.add("hide");
         var c = document.getElementById("content_log");
-        var p = document.createElement("p");
-        p.innerHTML = "Your account has been created succesfully. Have fun, " + sn.value + " :)";
-        
-        c.appendChild(p);
+        var h = document.createElement("h2");
+        h.classList.add("h-heart");
+        h.classList.add("center");
+        var span = document.createElement("span");
+        span.innerHTML = "Your account has been created!";
+        h.appendChild(span);
+        c.appendChild(h);
         return false; //true!
     } else {
         for (let i = 0; i < err.length; i++){

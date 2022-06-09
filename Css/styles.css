@@ -3,8 +3,13 @@ html{
     scroll-behavior: smooth;
 }
 
-a:link{
+a:link, a:visited{
     text-decoration: none;
+    color: #32706c;
+}
+
+a:hover{
+    color: #70324f;
 }
 
 img{
@@ -12,13 +17,13 @@ img{
 }
 
 p{
-    color: #5e5e5e;
+    color: #53616d;
     text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Abril Fatface', cursive;
-    color: #4b4b4b;
+    color: #53616d;
 }
 
 body {
@@ -34,17 +39,24 @@ header .btn{
     border-radius: 50%;
     float: right;
     margin: 2%;
-    padding: 1% 1.5%;
+    padding: 8px 14px;
     color: #ffffff;
 }
 
 header .btn:hover{
     background-color: #ffffff;
-    color: #3d513a;
+    color: #53616d;
 }
 
 header #hcontent {
     padding: 80px;
+}
+
+#hcontent div {
+    background-color: rgba(255, 255, 255, 0.448);
+    border-radius: 7px;
+    padding: 15px;
+    line-height: normal;
 }
 
 header, body, footer{
@@ -60,9 +72,8 @@ header, body, footer{
 }
 
 header, footer {
-    /*padding: 80px;*/
     text-align: center;
-    background-color: #2f4a2a;
+    background-color: #2f485e;
     color: white;
     font-family: 'Barlow', sans-serif;
     font-size: 16px;
@@ -76,8 +87,6 @@ header{
 }
 
 header h1{
-    margin-bottom: 0;
-    color: #53616d;
     font-size: 40px;
 }
 
@@ -181,6 +190,7 @@ navbar .searchlink:hover{
     padding: 6px;
     text-align: center;
     border: none;
+    float: right;
 }
 
 .searchlink input{
@@ -250,12 +260,7 @@ footer p, footer h2, footer h3{
     color:#cd717d;
 }
 
-footer a:link{
-    color: #cd717d;
-    text-decoration: none;
-}
-
-footer a:visited{
+footer a:link, footer a:visited{
     color: #cd717d;
     text-decoration: none;
 }
@@ -275,8 +280,7 @@ footer .fc{
 }
 
 footer .fc .f-item{
-    margin-right: 30px;
-    margin-left: 30px;
+    margin: 0 1%;
 }
 
 footer h2{
@@ -449,8 +453,8 @@ label{
 }
 
 .img-slide{
-    width: 97%;
-    height: 40vw;
+    width: 55vw;
+    height: 33vw;
     margin: auto;
     border: 3px solid rgb(255, 193, 216);
 }
@@ -508,18 +512,22 @@ label{
 
 .h-slide{
     color: #cd717d;
-    text-align: center;
+    text-transform: capitalize;
+    margin: auto;
+    width: max-content;
     line-height: normal;
     margin-top: unset;
 }
 
 .fc .img-slide{
     height: 20vw;
+    width: 24vw;
 }
 
 .fc .slide{
     margin: 10px 13px;
     min-height: unset;
+    flex-basis: min-content;
 }
 
 /*-----------------[SNACKBAR]-----------------*/
@@ -563,6 +571,12 @@ label{
    top: 15px;
 }
 
+/*To hide login-sign form*/
 .hide {
     display: none;
+}
+
+/*To center login-sign msj*/
+.center{
+    text-align: center;
 }
