@@ -15,7 +15,7 @@ recipe.push({
     page: "r3/fruit_galette.html"
 })
 recipe.push({
-    img: "Css-images/raspb.jfif",
+    img: "Css-images/raspb_lq.jpeg",
     tittle: "Raspberry hand pies",
     p: "These raspberry hand pies, also known as turnovers, are the perfect combination of sweetness from the raspberry filling and saltiness from the flaky crust. Ideal for a picnic or just as an afternoon treat.",
     page: "r1/raspberry hand pie.html"
@@ -29,8 +29,7 @@ function load(){
     a = document.querySelector("#slide a");
 
     set_slide(0);
-    setInterval(nextImg, 4000);
-    
+    setInterval(nextImg, 4000);    
 }
 
 function set_slide(i){
@@ -253,8 +252,12 @@ function signValidation(){
         h.classList.add("center");
         var span = document.createElement("span");
         span.innerHTML = "Your account has been created!";
+        p = document.createElement("p");
+        p.classList.add("center");
+        p.innerHTML = "Username: " + sig_nom.value + " , email: " + mail.value + ".";
         h.appendChild(span);
         c.appendChild(h);
+        c.appendChild(p);
         return false; //true!
     } else {
         for (let i = 0; i < err.length; i++){
