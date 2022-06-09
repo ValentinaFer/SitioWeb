@@ -65,9 +65,9 @@ function ingredientText(){
     }
 
     if (ingchecked == ings.length){
-        text.style.display = "block";
+        text.innerHTML = "You have all the ingredients! :D";
     } else {
-        text.style.display = "none";
+        text.innerHTML = "";
     }
 }
 
@@ -175,7 +175,7 @@ function loginValidation(){
     if (!email("email1")){
         err.push(errores.email_invalido);
     }
-    if (!username("password1")){
+    if (!empty("password1")){
         err.push(errores.password_vacio);
     }
     if (pswrd.value.trim().length < 8){
@@ -184,13 +184,17 @@ function loginValidation(){
     }
 
     if (err.length == 0){
+
         var form = document.getElementById("log_in");
         form.classList.add("hide");
         var c = document.getElementById("content_log");
         var p = document.createElement("p");
+        var p1 = document.createElement("p");
         p.innerHTML = "Login succesfully :D";
         c.appendChild(p);
+        c.appendChild(p1);
         return false; //true!
+
     } else {
         for (let i = 0; i < err.length; i++){
             var li = document.createElement("li");
@@ -215,7 +219,7 @@ function signValidation(){
     ul.innerHTML = "";
     err = [];
 
-    if (!username("username")){
+    if (!empty("username")){
         err.push(errores.nombre_invalido);
     }
     if (!email("email2")){
@@ -225,8 +229,7 @@ function signValidation(){
         err.push(errores.edad_invalida);
     }
 
-    //username() just checks if it's not empty that's why i also use it to check password 
-    if (!username("password2")){
+    if (!empty("password2")){
         err.push(errores.password_vacio);
     }
     if (pswrd.value.trim().length < 8){
@@ -244,7 +247,8 @@ function signValidation(){
         form.classList.add("hide");
         var c = document.getElementById("content_log");
         var p = document.createElement("p");
-        p.innerHTML = "Your account has been created succesfully! Thanks for joining! :) ";
+        p.innerHTML = "Your account has been created succesfully. Have fun, " + sn.value + " :)";
+        
         c.appendChild(p);
         return false; //true!
     } else {
@@ -280,7 +284,7 @@ function email(id){
     return true;
 }
 
-function username(id){
+function empty(id){
     var nom = document.getElementById(id);
     if (!nom.value.trim()){
         nom.classList.add("error");

@@ -312,10 +312,6 @@ footer #social a{
 
 /*-----------------[comment section]-----------------*/
 
-#text {
-    display: none;
-}
-
 .comment{
     border: 1px solid #5860579c;
     padding: 3%;
@@ -347,7 +343,11 @@ footer #social a{
 }
 
 .error{
-    border: 2px solid #b15f6a;
+    border: 2px solid #b15f6a; /*para los bordes de los inputs*/
+}
+
+#errors{
+    color: #661f29; /*para la lista de errores en la seccion de comentarios*/
 }
 
 form input[type=text], form input[type=email], textarea, form input[type=password], form input[type=number]{
@@ -379,10 +379,6 @@ form .submit{
 form .submit:hover{
     background-color: #7b9771;
     cursor:pointer;
-}
-
-#errors{
-    color: #661f29;
 }
 
 input[type=checkbox]{
