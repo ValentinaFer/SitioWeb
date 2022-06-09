@@ -81,7 +81,7 @@ header, footer {
 }
 
 header{
-    background-image: url(../Css-images/h3.jpg);
+    background-image: url(../Css-images/h60%1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -527,7 +527,6 @@ label{
 .fc .slide{
     margin: 10px 13px;
     min-height: unset;
-    flex-basis: min-content;
 }
 
 /*-----------------[SNACKBAR]-----------------*/

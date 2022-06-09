@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" charset="utf-8">
-    <head>
-        <meta lang="en" charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cottagecore recipes</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../Css/styles.css">
-        <link rel="icon" href = "../Css-images/daisy.png">
-        <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
-        <script src="../Js/Js.js"></script>
-    </head>
-    <body>
 
-        <navbar>
-            <ul>
-                <li><a href="../index.html" class="nav_link"><i class="fa-solid fa-house fa-lg"></i></a></li>
+<head>
+    <meta lang="en" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottagecore recipes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/styles.css">
+    <link rel="icon" href="../Css-images/daisy.png">
+    <script src="https://kit.fontawesome.com/8501bef335.js" crossorigin="anonymous"></script>
+    <script src="../Js/Js.js"></script>
+</head>
 
-                <li class="drop">
-                    <button class="drop_btn">Recipes<i class="fa-solid fa-caret-down"></i></button>
-                    <div class="drop_content">
-                        <a href="../category/cakes.html" class="nav_link">Cakes</a>
-                        <a href="#Cookies" class="nav_link">Cookies</a>
-                        <a href="#Bread" class="nav_link">Bread</a>
-                    </div>
-                </li>
+<body>
 
-                <li>
-                    <div class="nav_link searchlink">
+    <navbar>
+        <ul>
+            <li><a href="../index.html" class="nav_link"><i class="fa-solid fa-house fa-lg"></i></a></li>
+
+            <li class="drop">
+                <button class="drop_btn">Recipes<i class="fa-solid fa-caret-down"></i></button>
+                <div class="drop_content">
+                    <a href="../category/cakes.html" class="nav_link">Cakes</a>
+                    <a href="../index.html" class="nav_link">Cookies</a>
+                    <a href="../index.html" class="nav_link">Bread</a>
+                </div>
+            </li>
+
+            <li>
+                <div class="nav_link searchlink">
                     <form id="search">
                         <input type="search" placeholder="Search recipes..">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
-                    </div>
-                </li>
+                </div>
+            </li>
 
-            </ul>
-        </navbar>
+        </ul>
+    </navbar>
 
-        <div id="content_log">
-            <form method="post" id="log_in" onsubmit="return loginValidation()">
-                <h2>Log-in!</h2>
-                <ul id="loginErrors"></ul>
-                <label for="email">Email: </label>
-                <input type="text" id="email1" name="email" placeholder="Email">
-                <label for="password">Password: </label>
-                <input type="text" id="password1" name="password" placeholder="Password"> 
-                <input type="submit">
-                <hr>
-                <p><span>Don't have an account? </span><a href="sign_up.html">sign up!</a><p></p>
-            </form>
-            
-        </div>
-    </body>
+    <div id="content_log">
+        <form method="post" id="log_in" onsubmit="return loginValidation()">
+            <h2>Log-in!</h2>
+            <ul id="loginErrors"></ul>
+            <label for="email">Email: </label>
+            <input type="text" id="email1" name="email" placeholder="Email">
+            <label for="password">Password: </label>
+            <input type="text" id="password1" name="password" placeholder="Password">
+            <input type="submit">
+            <hr>
+            <p><span>Don't have an account? </span><a href="sign_up.html">sign up!</a>
+            <p></p>
+        </form>
+
+    </div>
+</body>
 
 </html>

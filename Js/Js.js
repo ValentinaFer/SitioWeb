@@ -9,7 +9,7 @@ recipe.push({
     page: "r2/chocolate_chips_cookies.html"
 });
 recipe.push({
-    img: "Css-images/gal.jfif",
+    img: "Css-images/gallete_loweq.jpg",
     tittle: "Fruit galette",
     p: "Symbols of summer, but as long as you have access to fruit, you have a perfectly good excuse to make a galette during the winter. This galette starts with apples, but feel free to add any other fruits.",
     page: "r3/fruit_galette.html"
@@ -210,14 +210,14 @@ function loginValidation(){
 function signValidation(){
 
     var ul = document.getElementById("signErrors");
-    var sn = document.getElementById("username");
+    var sig_nom = document.getElementById("username");
     var mail = document.getElementById("email2");
     var age = document.getElementById("age");
     var pswrd = document.getElementById("password2");
     pswrd.classList.remove("error");
     age.classList.remove("error");
     mail.classList.remove("error");
-    sn.classList.remove("error");
+    sig_nom.classList.remove("error");
     ul.innerHTML = "";
     err = [];
 
@@ -239,8 +239,8 @@ function signValidation(){
         pswrd.classList.add("error");
     }
 
-    tC = document.getElementById("tac");
-    if (!tC.checked){
+    termAndCond = document.getElementById("tac");
+    if (!termAndCond.checked){
         err.push(errores.terminosYcondiciones);
     }
 
